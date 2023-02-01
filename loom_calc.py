@@ -17,6 +17,19 @@ total_warp_ends = int(total_width_on_loom) * int(ends_per_inch)
 print('Total warp ends:')
 print(total_warp_ends)
 
-total_warp_needed = int(total_warp_ends) * int(total_warp_length) / 36
-print('How much yarn to buy in yards')
+total_warp_needed = (int(total_warp_ends) * int(total_warp_length)) / 36
+print('Total yards of warp needed:')
 print(total_warp_needed)
+
+#Weft Calculator
+
+weft_shot_length = int(int(total_width_on_loom) + int(total_width_on_loom) / 10)
+print('Single weft shot length:')
+print(weft_shot_length)
+
+wefts_per_inch = input("What is the total wefts per inch? ")
+inches_to_be_woven = int(finished_length) + int(fringe_length) + int(take_up)
+total_weft_needed = (int(wefts_per_inch) * int(inches_to_be_woven)) / 36
+print('total yards of weft needed:')
+print(total_weft_needed)
+
